@@ -2,7 +2,7 @@ import { useState } from "react";
 import "../App.css";
 import { useNavigate } from "react-router-dom";
 
-function BookingForm() {
+function BookingForm(props) {
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
   const [guests, setGuests] = useState("");
@@ -13,6 +13,9 @@ function BookingForm() {
     event.preventDefault();
     navigate("/confirmed-booking");
   }
+  const availableTimes = props.availableTimes.map((time) => {
+    return <option key={time}>{time}</option>;
+  });
 
   return (
     <div className="booking-page">
@@ -31,12 +34,7 @@ function BookingForm() {
         />
         <label htmlFor="res-time">Choose time</label>
         <select id="res-time" onChange={formValueChanged} value={time}>
-          <option>17:00</option>
-          <option>18:00</option>
-          <option>19:00</option>
-          <option>20:00</option>
-          <option>21:00</option>
-          <option>22:00</option>
+          {availableTimes}
         </select>
         <label htmlFor="guests">Number of guests</label>
         <input
@@ -64,6 +62,7 @@ function BookingForm() {
   function formValueChanged(event) {
     if (event.target.id === "res-date") {
       setDate(event.target.value);
+      props.dispatch(event.target.value);
     } else if (event.target.id === "res-time") {
       setTime(event.target.value);
     } else if (event.target.id === "guests") {
