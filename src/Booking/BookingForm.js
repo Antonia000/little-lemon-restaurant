@@ -72,8 +72,5 @@ function BookingForm(props) {
     }
   }
 }
-/*
-{ date: date, time: time, occasion: occasion, guest: guests }
-*/
 
 export default BookingForm;
