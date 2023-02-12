@@ -18,16 +18,16 @@ function HomeMain() {
               passage, and going through the cites of the word in classical
               literature, discovered the undoubtable source.
             </p>
-            <button click={reserveTable}>Reserve a table</button>
+            <button onClick={reserveTable}>Reserve a table</button>
           </div>
           <div className="home-main-image">
             <img src={restaurantFood} alt="Presentational"></img>
           </div>
         </div>
         <div className="second-section">
-          <div class="section-header">
+          <div className="section-header">
             <h1>This weeks specials!</h1>
-            <button click={onlineMenu}>Online Menu</button>
+            <button onClick={onlineMenu}>Online Menu</button>
           </div>
           <div></div>
         </div>
@@ -35,7 +35,9 @@ function HomeMain() {
     </main>
   );
   function reserveTable() {}
-  function onlineMenu() {}
+  function onlineMenu() {
+    console.log("hello");
+  }
 }
 
 export default HomeMain;

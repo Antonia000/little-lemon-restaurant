@@ -1,4 +1,6 @@
 import "../App.css";
+
+import { Link } from "react-router-dom";
 function Navigation() {
   return (
     <>
@@ -16,7 +18,7 @@ function Navigation() {
               <a href="/">Menu</a>
             </li>
             <li>
-              <a href="/reservations">Reservations</a>
+              <Link to="reservations">Reservations</Link>
             </li>
             <li>
               <a href="/order-online">Order Online</a>
