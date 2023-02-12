@@ -16,7 +16,7 @@ function BookingForm() {
 
   return (
     <div className="booking-page">
-      <h2>Book a table</h2>
+      <h1>Book a table</h1>
       <form className="reservation-form" onChange={formValueChanged}>
         <label htmlFor="res-date">Choose date</label>
         <input
