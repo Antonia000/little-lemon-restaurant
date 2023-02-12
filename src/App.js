@@ -48,7 +48,9 @@ export function App() {
     <>
       <Navigation></Navigation>
       <HomeMain></HomeMain>
-      <div className="special-dishes">{weeksSpecials}</div>
+      <div data-testid="special-dishes" className="special-dishes">
+        {weeksSpecials}
+      </div>
     </>
   );
 }

@@ -1,7 +1,9 @@
 import "../App.css";
 import restaurantFood from "../assets/restauranfood.jpg";
+import { useNavigate } from "react-router-dom";
 
 function HomeMain() {
+  const navigate = useNavigate();
   return (
     <main>
       <div className="home-main">
@@ -34,10 +36,10 @@ function HomeMain() {
       </div>
     </main>
   );
-  function reserveTable() {}
-  function onlineMenu() {
-    console.log("hello");
+  function reserveTable() {
+    navigate("/reservations");
   }
+  function onlineMenu() {}
 }
 
 export default HomeMain;
