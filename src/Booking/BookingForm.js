@@ -62,7 +62,7 @@ function BookingForm(props) {
   function formValueChanged(event) {
     if (event.target.id === "res-date") {
       setDate(event.target.value);
-      props.dispatch(event.target.value);
+      props.dispatch(new Date(event.target.value));
     } else if (event.target.id === "res-time") {
       setTime(event.target.value);
     } else if (event.target.id === "guests") {
